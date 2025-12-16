@@ -1,0 +1,104 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  line-height: 1.6;
+  background: #f4f4f4;
+}
+
+/* Navbar */
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #222;
+  padding: 15px 40px;
+  position: sticky;
+  top: 0;
+}
+
+nav h2 {
+  color: #00adb5;
+}
+
+nav ul {
+  display: flex;
+  list-style: none;
+}
+
+nav ul li a {
+  color: white;
+  margin-left: 20px;
+  text-decoration: none;
+}
+
+nav ul li a:hover {
+  color: #00adb5;
+}
+
+/* Home */
+.home {
+  height: 90vh;
+  background: #222;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.home span {
+  color: #00adb5;
+}
+
+.home button {
+  margin-top: 20px;
+  padding: 10px 25px;
+  border: none;
+  background: #00adb5;
+  color: white;
+  cursor: pointer;
+}
+
+/* Sections */
+section {
+  padding: 60px 40px;
+  background: white;
+  margin: 20px;
+  border-radius: 10px;
+}
+
+h2 {
+  margin-bottom: 20px;
+  color: #333;
+}
+
+/* Skills */
+.skills-container span {
+  display: inline-block;
+  background: #00adb5;
+  color: white;
+  padding: 8px 15px;
+  margin: 5px;
+  border-radius: 20px;
+}
+
+/* Projects */
+.project-card {
+  background: #f4f4f4;
+  padding: 20px;
+  margin-bottom: 15px;
+  border-radius: 10px;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 15px;
+  background: #222;
+  color: white;
+}
