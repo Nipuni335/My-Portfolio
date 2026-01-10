@@ -40,28 +40,61 @@ nav ul li a:hover {
   color: #00adb5;
 }
 
-/* Home */
+/* Home (UPDATED ONLY THIS) */
 .home {
   height: 90vh;
-  background: #222;
-  color: white;
+  background: #ffffff;
   display: flex;
-  flex-direction: column;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
+  padding: 80px 100px;
 }
 
-.home span {
-  color: #00adb5;
+.home-left {
+  max-width: 550px;
 }
 
-.home button {
-  margin-top: 20px;
-  padding: 10px 25px;
-  border: none;
-  background: #00adb5;
-  color: white;
+.home-left h1 {
+  font-size: 46px;
+  line-height: 1.2;
+  margin-bottom: 20px;
+}
+
+.home-left span {
+  color: #ff6b00;
+}
+
+.home-left p {
+  color: #555;
+  margin-bottom: 30px;
+}
+
+/* Home Buttons */
+.home-buttons button {
+  padding: 12px 28px;
+  font-size: 15px;
+  border-radius: 6px;
   cursor: pointer;
+  margin-right: 15px;
+}
+
+.btn-outline {
+  background: transparent;
+  border: 2px solid #ccc;
+}
+
+.btn-filled {
+  background: #ff6b00;
+  border: none;
+  color: white;
+}
+
+/* Home Image */
+.home-right img {
+  width: 360px;
+  height: 360px;
+  border-radius: 50%;
+  object-fit: cover;
 }
 
 /* Sections */
