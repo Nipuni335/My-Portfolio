@@ -162,6 +162,7 @@ section {
 .project-card {
   background: #ffffff;
   padding: 20px;
+  width: 95%;
   margin-bottom: 15px;
   border-radius: 10px;
 }
@@ -169,7 +170,7 @@ section {
 /* Footer */
 footer {
   text-align: center;
-  background: #222;
-  color: white;
+  background: #f4b67a;
+  color: #000;
   padding: 15px;
 }
