@@ -275,34 +275,45 @@
 
     <!-- RIGHT: Contact Form -->
     <div class="contact-form">
-      <form>
-        <input type="text" placeholder="Name *" required />
-        <input type="email" placeholder="Email *" required />
-        <textarea placeholder="Message *" required></textarea>
-        <button type="submit">Send message</button>
-      </form>
+      <form onsubmit="changeHelpText(event)">
+  <input type="text" placeholder="Name *" required />
+  <input type="email" placeholder="Email *" required />
+  <textarea placeholder="Message *" required></textarea>
+  <button type="submit">Send message</button>
+</form>
+
     </div>
 
   </div>
 </section>
 <!-- Floating Help Widget -->
 <div class="help-widget" onclick="scrollToContact()">
-  <div class="help-text">
+  <div class="help-text" id="helpText">
     Hi! We're here to help if you have any questions 👋
   </div>
   <div class="help-avatar">
     <img src="./images/avatar.png">
-
-    
-
   </div>
 </div>
+
 
 
 
   <footer>
     <p>© 2025 Nipuni Kavindya</p>
   </footer>
+  <script>
+  function changeHelpText(event) {
+    event.preventDefault(); // stop page reload
+
+    document.getElementById("helpText").textContent =
+      "Thank you connect me!. I will reply soon";
+
+    // optional: reset form
+    event.target.reset();
+  }
+</script>
+
 
 </body>
 
