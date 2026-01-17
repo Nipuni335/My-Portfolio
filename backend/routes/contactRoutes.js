@@ -3,20 +3,26 @@ import Contact from "../models/Contact.js";
 
 const router = express.Router();
 
-// POST /contact - Save contact form to DB
+// POST message (already exists)
 router.post("/", async (req, res) => {
-  const { name, email, message } = req.body;
-
-  if (!name || !email || !message) {
-    return res.status(400).json({ message: "All fields are required" });
-  }
-
   try {
-    const newContact = new Contact({ name, email, message });
-    await newContact.save();
-    res.status(201).json({ message: "Message sent successfully!" });
-  } catch (error) {
-    res.status(500).json({ message: "Server error" });
+    const { name, email, message } = req.body;
+    const newMessage = new Contact({ name, email, message });
+    await newMessage.save();
+
+    res.status(201).json({ message: "Message sent successfully" });
+  } catch (err) {
+    res.status(500).json({ message: "Failed to send message" });
+  }
+});
+
+// GET all messages (INBOX)
+router.get("/", async (req, res) => {
+  try {
+    const messages = await Contact.find().sort({ createdAt: 1 });
+    res.json(messages);
+  } catch (err) {
+    res.status(500).json({ message: "Failed to fetch messages" });
   }
 });
 
